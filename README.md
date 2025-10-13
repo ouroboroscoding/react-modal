@@ -35,11 +35,11 @@ function App(props) {
 }
 ```
 
-![Example image of Modal component closed](images/closed.png)
+![Example image of Modal component closed](https://github.com/ouroboroscoding/react-modal/blob/main/images/closed.png)
 
 And then after the user clicks
 
-![Example image of Modal component open](images/open.png)
+![Example image of Modal component open](https://github.com/ouroboroscoding/react-modal/blob/main/images/open.png)
 
 ## Props
 
