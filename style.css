@@ -1,0 +1,59 @@
+.oc_modal {
+	background-color: rgba(0, 0, 0, 0.75);
+	height: 100dvh;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+}
+
+.oc_modal_outer {
+	left: 50%;
+	max-height: calc(100dvh - 10px);
+	max-width: calc(100vw - 10px);
+	margin: auto;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100vw;
+}
+
+.oc_modal_inner {
+	background-color: rgba(255, 255, 255, 1);
+	border-radius: 10px;
+	height: 100%;
+	position: relative;
+	width: 100%;
+}
+
+.oc_modal_inner noBackground {
+	background-color: transparent;
+}
+
+.oc_modal_inner_close {
+	cursor: pointer;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+
+.oc_modal_inner_content {
+	margin: auto 0;
+	max-height: calc(100dvh - 30px);
+	overflow-y: auto;
+	padding: 10px 20px;
+}
+
+@media only screen and (min-width: 600px) {
+
+	.oc_modal_outer {
+		margin: 0 auto;
+		max-width: 80vw;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	.oc_modal_outer {
+		max-width: 70vw;
+	}
+}
