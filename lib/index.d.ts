@@ -11,13 +11,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 export type ModalCloseCallback = () => void;
 export type ModalProps = {
-    children: React.JSX.Element;
+    children: React.ReactNode;
     maxWidth?: string | number;
     noBackground: boolean;
     onClose?: ModalCloseCallback;
     open: boolean;
     width?: string | number;
-    xIcon?: React.JSX.Element;
+    xIcon?: React.ReactNode;
 };
 /**
  * Modal
