@@ -1,6 +1,6 @@
 {
 	"name": "@ouroboros/react-modal",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Modal Component",
 	"main": "lib/index.js",
 	"types": "lib/index.d.ts",
@@ -33,7 +33,7 @@
 		"typescript": "^5.9.2"
 	},
 	"dependencies": {
-		"@ouroboros/react-portal": "^1.0.2",
+		"@ouroboros/react-portal": "^1.0.3",
 		"@ouroboros/tools": "^0.7.3",
 		"prop-types": "^15.8.1"
 	},
