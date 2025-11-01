@@ -21,9 +21,9 @@ export type ModalCloseCallback = () => void;
 export type ModalProps = {
 	children: React.ReactNode,
 	maxWidth?: string | number,
-	noBackground: boolean,
+	noBackground?: boolean,
 	onClose?: ModalCloseCallback,
-	open: boolean,
+	open?: boolean,
 	width?: string | number,
 	xIcon?: React.ReactNode
 }
@@ -40,9 +40,9 @@ type MouseDownCallback = (event: MouseEvent) => void
 export default function Modal({
 	children,
 	maxWidth,
-	noBackground,
+	noBackground = false,
 	onClose,
-	open,
+	open = true,
 	width,
 	xIcon
  }: ModalProps) {
@@ -113,7 +113,7 @@ Modal.propTypes = {
 	maxWidth: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
 	noBackground: PropTypes.bool,
 	onClose: PropTypes.func,
-	open: PropTypes.bool.isRequired,
+	open: PropTypes.bool,
 	width: PropTypes.oneOfType([ PropTypes.string, PropTypes.number ]),
 	xIcon: PropTypes.element
 }
