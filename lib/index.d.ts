@@ -13,9 +13,9 @@ export type ModalCloseCallback = () => void;
 export type ModalProps = {
     children: React.ReactNode;
     maxWidth?: string | number;
-    noBackground: boolean;
+    noBackground?: boolean;
     onClose?: ModalCloseCallback;
-    open: boolean;
+    open?: boolean;
     width?: string | number;
     xIcon?: React.ReactNode;
 };
@@ -33,7 +33,7 @@ declare namespace Modal {
         maxWidth: PropTypes.Requireable<NonNullable<string | number | null | undefined>>;
         noBackground: PropTypes.Requireable<boolean>;
         onClose: PropTypes.Requireable<(...args: any[]) => any>;
-        open: PropTypes.Validator<boolean>;
+        open: PropTypes.Requireable<boolean>;
         width: PropTypes.Requireable<NonNullable<string | number | null | undefined>>;
         xIcon: PropTypes.Requireable<PropTypes.ReactElementLike>;
     };

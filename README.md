@@ -22,15 +22,16 @@ function App(props) {
 
   return (
     <button onClick={() => modalSet(true)}>Open Modal</button>
-    <Modal
-      open={modal}
-      onClose={() => modalSet(false)}
-      xIcon={ <i className="fa-solid fa-circle-xmark" /> }
-    >
-      <div>
-        <p>This is modal content</p>
-      </div>
-    </Modal>
+    {modal &&
+      <Modal
+        onClose={() => modalSet(false)}
+        xIcon={ <i className="fa-solid fa-circle-xmark" /> }
+      >
+        <div>
+          <p>This is modal content</p>
+        </div>
+      </Modal>
+    }
   );
 }
 ```
@@ -48,7 +49,7 @@ And then after the user clicks
 | maxWidth | string \| number | no | The maximum allowable width for the modal dialog, can be sent a string as is, or a number (pixels) |
 | noBackground | bool | no | Set to `true` to make the modal transparent |
 | onClose | callback | no | Called when the user clicks outside the modal, or on the X `xIcon` if provided |
-| open | boolean | yes | Set to true to display the modal |
+| open | boolean | no | Set to `false` to hide the modal without destroying the Modal or children |
 | width | string \| number | no | The width to set the modal dialog, can be sent a string as is, or a number (pixels) |
 | xIcon | string \| element | no | If set, whatever is passed will be displayed in the top right corner and trigger the onClose prop (if it was also passed) when clicked |
 
